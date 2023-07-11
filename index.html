@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 7</title>
+    <!-- ? Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- ? Script JS Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ? Script JS -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1 class="display-1 text-center mb-5 mt-5">Biblioteca</h1>
+    <div class="container">
+      <table class="table table-scriped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Lançamento</th>
+            <th scope="col">Autor(a)</th>
+            <th scope="col">Gênero</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="insertRow"></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container mb-5 mt-5">
+      <hr class="border-primary border-3 opacity-100" />
+    </div>
+    <div class="container mb-5" id="cadBook">
+      <h2 class="text-center mb-4">Cadastro de livros</h2>
+
+      <form name="register" onsubmit="event.preventDefault()">
+        <!-- ! Cadastro do Código e do Título -->
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="codBook" class="form-label">Código:</label>
+            <input
+              type="text"
+              name="cod"
+              id="codBook"
+              class="form-control"
+              placeholder="Código"
+            />
+          </div>
+
+          <div class="mb-3 col">
+            <label for="titleBook" class="form-label">Título:</label>
+            <input
+              type="text"
+              name="title"
+              id="titleBook"
+              class="form-control"
+              placeholder="Título"
+            />
+          </div>
+        </div>
+        <!-- ! Cadastro do lançamento e autor(a) -->
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="releaseBook" class="form-label"
+              >Data de lançamento:</label
+            >
+            <input
+              type="text"
+              id="releaseBook"
+              name="release"
+              class="form-control"
+              placeholder="DD de MM de AA"
+            />
+          </div>
+          <div class="mb-3 col">
+            <label for="authorBook" class="form-label">Autor(a):</label>
+            <input
+              type="text"
+              name="author"
+              id="authorBook"
+              class="form-control"
+              placeholder="Autor ou Autora"
+            />
+          </div>
+        </div>
+        <!-- ! Cadastro do gênero -->
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="genBook" class="form-label">Gêneros:</label>
+            <input
+              type="text"
+              name="gen"
+              id="genBook"
+              class="form-control"
+              placeholder="Gêneros"
+            />
+          </div>
+        </div>
+        <!-- ? Botão de enviar  -->
+        <div class="col-auto d-flex justify-content-center">
+          <button
+            type="submit"
+            onclick="validationForm(); insert()"
+            class="btn btn-primary mt-3"
+          >
+            Cadastar!
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
